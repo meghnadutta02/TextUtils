@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+ import React,{useState} from 'react'
 export default function Textform(props) {
     const [content,setContent]=useState("");
     const colour = props.mode ? "light" : "dark";

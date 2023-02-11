@@ -1,3 +1,4 @@
-.accordion-button::after{
-    filter: invert(1);
-}
+.accordion-button::after {
+    color: white;
+  }
+  
