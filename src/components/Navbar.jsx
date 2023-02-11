@@ -1,6 +1,7 @@
 import React from "react";
 //import PropTypes from 'prop-types'
 import _ from "lodash";
+import {Link } from "react-router-dom";
 export default function Navbar(props) {
   const colour = props.mode ? "light" : "dark";
   document.body.style.backgroundColor = colour === "dark" ? null : "#003366";
@@ -10,7 +11,7 @@ export default function Navbar(props) {
       data-bs-theme={!props.mode ? null : "dark"}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           TextUtils
         </a>
         <button
@@ -27,14 +28,14 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a href="#" className="nav-link active" aria-current="page">
+              <Link to={`/`} className="nav-link active" aria-current="page">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
+              <Link to={`about`} className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <div className="form-check form-switch my-2 mx-1">
